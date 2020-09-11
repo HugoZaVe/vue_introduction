@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/vue.js"></script>
+    <title>Vue</title>
+    <style>
+        .error{
+            color: red;
+        }
+        .no_error{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+
+        <h1 v-bind:class="{ error: p_error, no_error: !p_error}">This is a text</h1>
+
+        <h1 v-if="p_error">This is an if text</h1>
+        <h1 v-show="p_error">This is a show text</h1>
+
+        <div v-html = "content_html"></div>
+        <img v-bind:src="src" :alt="text">
+        {{ sum }}
+        <p> Computed reversed message: "{{ reversedMessage}}" </p>
+        <p> {{ calculateSum(sum, value) }} </p>
+    </div>
+    <script src="../js/app.js"></script>
+</body>
+</html>
