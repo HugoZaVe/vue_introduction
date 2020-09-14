@@ -1,5 +1,19 @@
+const Foo = { template: '<div>foo</div>' }
+const Bar = { template: '<div>bar</div>' }
+
+const routes = [
+    { path: '/foo', component: Foo },
+    { path: '/bar', component: Bar }
+  ]
+
+const router = new VueRouter({
+    routes // short for `routes: routes`
+})
+  
+
 let app = new Vue({
     el: '#app',
+    router,
     data: {
         message: 'El paco me la pela',
         sum: 3 + 6,

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/vue.js"></script>
+    <script src="../js/vue-router.js"></script>
     <title>Vue</title>
     <style>
         .error{
@@ -16,6 +17,11 @@
 </head>
 <body>
     <div id="app">
+
+        <router-link to="/foo">Go to Foo</router-link>
+        <router-link to="/bar">Go to Bar</router-link>
+
+        <router-view></router-view>
 
         <h1 v-bind:class="{ error: p_error, no_error: !p_error}">This is a text</h1>
 
