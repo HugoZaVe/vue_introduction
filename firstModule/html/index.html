@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/vue.js"></script>
     <script src="../js/vue-router.js"></script>
+    <script src="../components/ImagePost.js"></script>
     <title>Vue</title>
     <style>
         .error{
@@ -33,6 +34,8 @@
         {{ sum }}
         <p> Computed reversed message: "{{ reversedMessage}}" </p>
         <p> {{ calculateSum(sum, value) }} </p>
+
+        <img-post :url="img_pixa"></img-post>
     </div>
     <script src="../js/app.js"></script>
 </body>
